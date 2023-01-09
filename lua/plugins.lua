@@ -1,4 +1,3 @@
-
 -- Set up packer
 
 return require('packer').startup(function(use)
@@ -28,6 +27,14 @@ return require('packer').startup(function(use)
     }
 
   use {
+    's1n7ax/nvim-window-picker',
+    tag = 'v1.*',
+    config = function()
+        require'window-picker'.setup()
+    end,
+  }
+
+  use {
     "folke/which-key.nvim",
     config = function()
       require("which-key").setup {
@@ -40,9 +47,8 @@ return require('packer').startup(function(use)
 
   use "EdenEast/nightfox.nvim"
 
-
-	-- Post-install/update hook with neovim command
-	--use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-	--
-	--
+		-- Post-install/update hook with neovim command
+		--use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+		--
+		--
 end)
