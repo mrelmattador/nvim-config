@@ -1,6 +1,13 @@
 require('plugins')
 
-vim.g.mapleader = " "
+--keymaps
+vim.g.mapleader = ' '
+local keymap = vim.keymap.set
+keymap("n", "<leader>e", "<cmd>Neotree<CR>")
+keymap("n", "<leader>w", "<C-w>w")
+keymap("n", "<S-l>", ":bnext<CR>")
+keymap("n", "<S-h>", ":bprevious<CR>")
+
 
 -- basic settings
 vim.o.relativenumber = true
