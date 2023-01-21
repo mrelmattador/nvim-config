@@ -10,6 +10,7 @@ keymap("n", "<S-h>", ":bprevious<CR>")
 
 
 -- basic settings
+vim.o.number = true
 vim.o.relativenumber = true
 vim.o.swapfile = false
 vim.o.tabstop = 2
